@@ -4,7 +4,7 @@ FROM ${BASE_IMAGE} AS builder
 
 ADD . ./
 
-RUN sudo chown -R rust:rust /home/rust
+RUN chown -R rust:rust /home/rust
 
 RUN cargo build --release
 
